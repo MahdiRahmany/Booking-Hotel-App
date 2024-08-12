@@ -1,9 +1,15 @@
 import { MdLocationOn } from "react-icons/md";
-import { HiCalendar, HiSearch } from "react-icons/hi";
+import { HiCalendar, HiMinus, HiPlus, HiSearch } from "react-icons/hi";
 import { useState } from "react";
 
 function Header() {
   const [destination, setDestination] = useState("");
+  const [openOption, setOpenOption] = useState(false);
+  const [options, setOptions] = useState({
+    adult: 1,
+    children: 0,
+    room: 1,
+  });
 
   return (
     <div className="header">
@@ -27,7 +33,10 @@ function Header() {
           <span className="seperator"></span>
         </div>
         <div className="headerSearchItem">
-          <div id="optionDropDown">1 adult &bull; 1 children &bull; 1 room</div>
+          <div id="optionDropDown" onClick={() => setOpenOption(!openOption)}>
+            {openOption && <GuestOptions options={options} />}1 adult &bull; 1
+            children &bull; 1 room
+          </div>
           <span className="seperator"></span>
         </div>
         <div className="headerSearchItem">
@@ -41,3 +50,30 @@ function Header() {
 }
 
 export default Header;
+
+function GuestOptions() {
+  return (
+    <div className="guestOptions">
+      <OptionItem />
+      <OptionItem />
+      <OptionItem />
+    </div>
+  );
+}
+
+function OptionItem() {
+  return (
+    <div className="guestOptionItem">
+      <div className="optionText">Adult</div>
+      <div className="optionCounter">
+        <div className="optionCounterBtn">
+          <HiMinus className="icon" />
+        </div>
+        <div className="optionCounterNumber">1</div>
+        <div className="optionCounterBtn">
+          <HiPlus className="icon" />
+        </div>
+      </div>
+    </div>
+  );
+}
