@@ -1325,15 +1325,6 @@
   ],
   "bookmarks": [
     {
-      "cityName": "Abalessa",
-      "country": "Algeria",
-      "countryCode": "DZ",
-      "latitude": "23.18455079512732",
-      "longitude": "3.795523257510883",
-      "host_location": "Abalessa Algeria",
-      "id": 1
-    },
-    {
       "cityName": "Mahidasht",
       "country": "Iran (Islamic Republic of)",
       "countryCode": "IR",
@@ -1368,6 +1359,15 @@
       "longitude": "67.78003711374224",
       "host_location": "Baba Kot Pakistan",
       "id": 8
+    },
+    {
+      "cityName": "Abalessa",
+      "country": "Algeria",
+      "countryCode": "DZ",
+      "latitude": "22.68593442866538",
+      "longitude": "3.9276123046875004",
+      "host_location": "Abalessa Algeria",
+      "id": 9
     }
   ]
 }

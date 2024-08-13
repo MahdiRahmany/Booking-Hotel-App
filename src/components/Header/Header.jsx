@@ -58,6 +58,7 @@ function Header() {
               date[0].endDate,
               "MM/dd/yyyy"
             )}`}
+            
           </div>
           {openDate && (
             <DateRange
