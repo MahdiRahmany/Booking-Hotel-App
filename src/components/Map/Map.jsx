@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function Map() {
   const { isLoading, hotels } = useHotels();
-  const [mapCenter, setMapCenter] = useState(51, 3);
+  const [mapCenter, setMapCenter] = useState([20, 3]);
 
   return (
     <div className="mapContainer">
@@ -18,12 +18,10 @@ function Map() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
         />
-        {hotels.map(item => (
+        {hotels.map((item) => (
           <Marker key={item.id} position={[item.latitude, item.longitude]}>
-          <Popup>
-            {item.host_location}
-          </Popup>
-        </Marker>
+            <Popup>{item.host_location}</Popup>
+          </Marker>
         ))}
       </MapContainer>
     </div>
