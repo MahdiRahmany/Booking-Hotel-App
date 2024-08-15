@@ -12,6 +12,7 @@ function App() {
     <HotelsProvider>
       <Toaster />
       <Header />
+
       <Routes>
         <Route path="/" element={<LocationList />} />
         <Route path="/hotels" element={<AppLayout />}>

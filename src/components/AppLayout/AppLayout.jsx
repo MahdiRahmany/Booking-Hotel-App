@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Map from "../Map/Map";
 
+
 function AppLayout() {
   return (
     <div className="appLayout">
