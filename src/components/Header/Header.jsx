@@ -13,7 +13,10 @@ import {
 } from "react-router-dom";
 
 function Header() {
-  const [destination, setDestination] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [destination, setDestination] = useState(
+    searchParams.get("destination") || ""
+  );
   const [openOption, setOpenOption] = useState(false);
   const [options, setOptions] = useState({
     Adult: 1,
@@ -40,7 +43,6 @@ function Header() {
 
   const [openDate, setOpenDate] = useState();
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
 
   const handleSearch = () => {
     const encodedParams = createSearchParams({
@@ -105,7 +107,7 @@ function Header() {
         </div>
         <div className="headerSearchItem">
           <button className="headerSearchBtn" onClick={handleSearch}>
-            <HiSearch />
+            <HiSearch className="headerIcon"/>
           </button>
         </div>
       </div>
