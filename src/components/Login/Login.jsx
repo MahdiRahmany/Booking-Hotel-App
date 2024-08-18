@@ -1,13 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useAuth } from "../context/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("user@mail.com");
+  const [password, setPassword] = useState("1234");
+  const { user, login, isAuthenticated } = useAuth();
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (email && password) login(email, password);
+  };
+
+  useEffect(() => {
+    if (isAuthenticated) navigate("/", { replace: true });
+  }, [isAuthenticated, navigate]);
 
   return (
     <div className="loginContainer">
       <h2>Login</h2>
-      <form action="" className="form">
+      <form onSubmit={handleSubmit} className="form">
         <div className="formControl">
           <label htmlFor="email">Email</label>
           <input value={email} type="text" name="email" id="email" />
@@ -23,7 +36,7 @@ function Login() {
           />
         </div>
         <div className="buttons">
-          <buttons className="btn btn--primary">Login</buttons>
+          <button className="btn btn--primary">Login</button>
         </div>
       </form>
     </div>
