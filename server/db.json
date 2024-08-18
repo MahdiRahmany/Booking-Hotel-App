@@ -1341,6 +1341,24 @@
       "latitude": "46.604167162931844",
       "longitude": "68.20312500000001",
       "host_location": "Ulytau Kazakhstan"
+    },
+    {
+      "id": "1327",
+      "cityName": "Zavareh",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "33.73119253613478",
+      "longitude": "52.55859375000001",
+      "host_location": "Zavareh Iran (Islamic Republic of)"
+    },
+    {
+      "id": "510f",
+      "cityName": "Ramadi",
+      "country": "Iraq",
+      "countryCode": "IQ",
+      "latitude": "33.364943593285545",
+      "longitude": "42.93457031250001",
+      "host_location": "Ramadi Iraq"
     }
   ]
 }
