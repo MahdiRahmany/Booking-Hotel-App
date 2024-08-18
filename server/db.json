@@ -1323,5 +1323,24 @@
       ]
     }
   ],
-  "bookmarks": []
+  "bookmarks": [
+    {
+      "id": "b306",
+      "cityName": "Verkhotur’ye",
+      "country": "Russian Federation (the)",
+      "countryCode": "RU",
+      "latitude": "58.847858685739176",
+      "longitude": "61.17187500000001",
+      "host_location": "Verkhotur’ye Russian Federation (the)"
+    },
+    {
+      "id": "0dda",
+      "cityName": "Ulytau",
+      "country": "Kazakhstan",
+      "countryCode": "KZ",
+      "latitude": "46.604167162931844",
+      "longitude": "68.20312500000001",
+      "host_location": "Ulytau Kazakhstan"
+    }
+  ]
 }
