@@ -1,7 +1,6 @@
 import { Toaster } from "react-hot-toast";
 import "./App.css";
 import AuthProvider from "./components/context/AuthProvider";
-import { BookmarkListProvider } from "./components/context/BookmarkListContext.jsx";
 import Header from "./components/Header/Header";
 import LocationList from "./components/LocationList/LocationList";
 import { Route, Routes } from "react-router-dom";
@@ -15,6 +14,7 @@ import SingleBookmark from "./components/SingleBookmark/SingleBookmark";
 import AddNewBookmark from "./components/AddNewBookmark/AddNewBookmark";
 import Login from "./components/Login/Login";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+import BookmarkListProvider from "./components/context/BookmarkListContext";
 
 function App() {
   return (
