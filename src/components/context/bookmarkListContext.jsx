@@ -3,7 +3,8 @@ import axios from "axios";
 import toast from "react-hot-toast";
 
 const BookmarkContext = createContext();
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:5000";
+
 
 const initialState = {
   bookmarks: [],
@@ -57,9 +58,6 @@ function bookmarkReducer(state, action) {
 }
 
 function BookmarkListProvider({ children }) {
-  // const [currentBookmark, setCurrentBookmark] = useState(null);
-  // const [bookmarks, setBookmarks] = useState([]);
-  // const [isLoading, setIsLoading] = useState(false);
 
   const [{ bookmarks, isLoading, currentBookmark }, dispatch] = useReducer(
     bookmarkReducer,
