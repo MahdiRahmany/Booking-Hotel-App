@@ -4,7 +4,7 @@ import { useHotels } from "../context/HotelsProvider";
 
 function Hotels() {
   const { isLoading, hotels, currentHotel } = useHotels();
-  if (isLoading) <Loader />;
+  if (isLoading) return <Loader />;
 
   return (
     <div className="searchList">
@@ -24,11 +24,8 @@ function Hotels() {
               <div className="searchItemDesc">
                 <p className="location">{item.smart_location}</p>
                 <p className="name">{item.name}</p>
-                <p className="name">{item.name}</p>
-                <p className="price">
-                  €&nbsp;{item.price}&nbsp;
-                  <span>night</span>
-                </p>
+                €&nbsp;{item.price}&nbsp;
+                <span>night</span>
               </div>
             </div>
           </Link>

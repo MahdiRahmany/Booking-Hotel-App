@@ -43,7 +43,7 @@ function Header() {
     },
   ]);
 
-  const [openDate, setOpenDate] = useState();
+  const [openDate, setOpenDate] = useState(false);
   const navigate = useNavigate();
 
   const handleSearch = () => {
@@ -64,7 +64,7 @@ function Header() {
       <NavLink to="/bookmark">Bookmarks</NavLink>
       <div className="headerSearch">
         <div className="headerSearchItem locationIcon">
-          <MdLocationOn />
+          <MdLocationOn className="headerIcon locationIcon" />
           <input
             value={destination}
             onChange={(e) => setDestination(e.target.value)}
@@ -97,7 +97,7 @@ function Header() {
         </div>
         <div className="headerSearchItem">
           <div id="optionDropDown" onClick={() => setOpenOption(!openOption)}>
-            {options.Adult} Adult &bull; {options.Children} Children &bull;{" "}
+            {options.Adult} Adult &bull; {options.Children} Children &bull;
             {options.Room} Room
           </div>
           {openOption && (

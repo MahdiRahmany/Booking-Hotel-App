@@ -30,7 +30,7 @@ function AddNewBookmark() {
         const { data } = await axios.get(
           `${BASE_GEOCODING_URL}?latitude=${lat}&longitude=${lng}`
         );
-        if (!data.countryName)
+        if (!data.countryCodep)
           throw new Error(
             "this location is not a city! please click somewhere else."
           );
@@ -63,7 +63,7 @@ function AddNewBookmark() {
   };
 
   if (isLoadingGeoCoding) return <Loader />;
-  if (geoCodingError) return <p>{geoCodingError}</p>;
+  if (geoCodingError) return <strong>{geoCodingError}</strong>;
 
   return (
     <div>
@@ -71,11 +71,23 @@ function AddNewBookmark() {
       <form className="form" onSubmit={handleSubmit}>
         <div className="formControl">
           <label htmlFor="cityName">City Name</label>
-          <input value={cityName} type="text" name="cityName" id="cityName" />
+          <input
+            value={cityName}
+            onChange={(e) => setCityName(e.target.value)}
+            type="text"
+            name="cityName"
+            id="cityName"
+          />
         </div>
         <div className="formControl">
           <label htmlFor="country">Country Name</label>
-          <input value={country} type="text" name="country" id="country" />
+          <input
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
+            type="text"
+            name="country"
+            id="country"
+          />
           <ReactCountryFlag className="flag" svg countryCode={countryCode} />
         </div>
         <div className="buttons">

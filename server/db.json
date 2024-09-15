@@ -1359,6 +1359,15 @@
       "latitude": "33.364943593285545",
       "longitude": "42.93457031250001",
       "host_location": "Ramadi Iraq"
+    },
+    {
+      "id": "2245",
+      "cityName": "Abalessa",
+      "country": "Algeria",
+      "countryCode": "DZ",
+      "latitude": "22.02836476800154",
+      "longitude": "4.152832031250001",
+      "host_location": "Abalessa Algeria"
     }
   ]
 }

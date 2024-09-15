@@ -23,7 +23,13 @@ function Login() {
       <form onSubmit={handleSubmit} className="form">
         <div className="formControl">
           <label htmlFor="email">Email</label>
-          <input value={email} type="text" name="email" id="email" />
+          <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            type="text"
+            name="email"
+            id="email"
+          />
         </div>
         <div className="formControl">
           <label htmlFor="password">Password</label>
