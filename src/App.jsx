@@ -14,7 +14,7 @@ import SingleBookmark from "./components/SingleBookmark/SingleBookmark";
 import AddNewBookmark from "./components/AddNewBookmark/AddNewBookmark";
 import Login from "./components/Login/Login";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
-import BookmarkListProvider from "./components/context/BookmarkListContext";
+import BookmarkListProvider from "./components/context/BookmarkListContext.jsx";
 
 function App() {
   return (
