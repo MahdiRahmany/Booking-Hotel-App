@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "concurrently \"vite\" \"json-server --watch server/db.json --port 5000\"",
     "dev": "concurrently \"vite\" \"json-server --watch server/db.json --port 5000\"",
-    "build": "vite build",
+    "build": "concurrently \"vite build\" \"json-server --watch server/db.json --port 5000\"",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
