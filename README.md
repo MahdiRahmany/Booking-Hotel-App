@@ -233,4 +233,3 @@ Contributions are welcome! Please follow these steps:
 5. **Open a pull request**
 
 Please ensure your code adheres to the project's coding standards and passes all linting checks.
-```
